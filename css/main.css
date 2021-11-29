@@ -1,0 +1,776 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+
+/*
+ * MOJE STYLE
+ */
+
+/*
+font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+*/
+
+/* --------------------------------FADE IN -------------------------*/
+body { 
+            opacity: 0; 
+            transition: opacity 0.5s; 
+        } 
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+p {
+    font-family: 'roboto';
+}
+
+/* --------------------------------BELKA CZAS-------------------------*/
+
+.belka_header {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0); text-align: center; font-size: 10px; font-weight: bold; font-family: 'roboto'; letter-spacing: 0px; color: #FFFFFF; opacity: 1;
+}
+@media screen and (min-width: 576px) {
+    .belka_header {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 767px) {
+    .belka_header {
+        font-size: 20px;
+    }
+}
+
+
+/*
+ *
+ NAV BAR
+ *
+ */
+
+.nav-dist_from_top {
+    position: relative;
+    top: calc(28px + (30 - 28) * ((100vw - 992px) / (2560 - 992)));
+}
+
+.nav_link {
+    display:inline-block;
+    transition: 0.2s;
+    border-bottom: 3px solid transparent;
+}
+.nav_link:hover {
+    font-weight: bold;
+    border-bottom: 3px solid white;
+}
+.nav_link::before {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;;
+}
+
+#mobile_nav {
+    
+    overflow: hidden;
+    background-color: #F4F0EC;
+}
+
+.slider {
+    transition:all 0.5s ease-in-out;
+    height:0px;
+}
+
+.slider.open {
+    height:215px;
+    overflow:auto;
+}
+
+.nawigacja {
+    background: transparent url('../img/BG.svg') 0% 0% no-repeat padding-box; 
+    opacity: 1; 
+    background-size: cover; 
+    height: 80px;
+    /*max-height: 4.5vw;*/
+    /*min-height: 80px; */
+}
+
+.nav_logo {
+    width: calc(118px + (170 - 118) * ((100vw - 320px) / (1920 - 320)));
+    overflow: visible;
+}
+
+/*
+ *
+ SEKCJA MAIN IMAGE
+ *
+ */
+
+.main_img {
+    /*position: relative; 
+    bottom: 2vw; 
+    z-index: -10; */
+}
+
+@media screen and (min-width: 991px) {
+    .main_img {
+        
+    }
+}
+
+.main_img_mobile {
+    width: 100%;
+    max-width: 500px;
+}
+
+/*
+ *
+ SEKCJA OFERTA
+ *
+ */
+
+.oferta_tekst {
+    font-family: 'roboto';
+    font-size: 16px;
+    max-width: 95%;
+}
+@media screen and (min-width: 576px) {
+    .oferta_tekst {
+        font-size: 20px;
+    }
+}
+.number {
+    font-size: 56px;
+    font-weight: 700;
+    color: #F36B7F;
+    
+    font-family: 'roboto';
+}
+
+/*
+ *
+ SEKCJA POZNAJ NAS
+ *
+ */
+
+.team_header {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+text-align: center;
+font: normal normal bold 40px/48px Roboto;
+letter-spacing: 0px;
+color: #333333;
+opacity: 1;
+}
+@media screen and (min-width: 768px) {
+    .team_header {
+        font-size: 56px;
+    }
+}
+
+
+.karta_tworcy {
+    width: 13rem;
+    border-radius: 8px;
+    
+}
+
+/*@media screen and (min-width: 1200px) {
+    .karta_tworcy {
+        width: 13rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .karta_tworcy {
+        width: 10rem;
+    }
+}*/
+
+.tworcy_nazwa {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) 18px/var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto); letter-spacing: var(--unnamed-character-spacing-0); text-align: left; font: normal normal bold 18px/24px Roboto; letter-spacing: 0px; color: #333333; opacity: 1;
+}
+
+.tworcy_nazwa_mobile {
+    font-family: 'roboto';
+    font-size: 14px;
+    font-weight: bold;
+}
+@media screen and (min-width: 576px) {
+    .tworcy_nazwa_mobile {
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .tworcy_nazwa_mobile {
+        font-size: 14px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .tworcy_nazwa_mobile {
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .tworcy_nazwa_mobile {
+        font-size: 16px;
+    }
+}
+
+/*
+ *
+ SEKCJA TEST PRESETÓW
+ *
+ */
+
+.preset_select {
+    max-width: 205px; 
+    cursor: pointer;
+    border: 0px solid #F36B7F;
+}
+
+.preset_select_active {
+    max-width: 205px; 
+    cursor: pointer;
+    border: 5px solid #F36B7F;
+    border-radius: 12px;
+}
+
+.karta_preset_select {
+    //width: 13rem;
+    width: 42%;
+    border: 0px;
+}
+@media screen and (min-width: 576px) {
+    .karta_preset_select {
+        width:  13rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    .karta_preset_select {
+        width:  10rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .karta_preset_select {
+        width:  13rem;
+    }
+}
+.preset_title {
+    font-family: 'roboto';
+    font-size: 15px;
+    font-weight: bold;
+}
+@media screen and (min-width: 576px) {
+    .preset_title {
+        font-size:  16px;
+    }
+}
+
+.preset_author {
+    font-family: 'roboto';
+    opacity: 0.5;
+    font-size: 10px;
+}
+@media screen and (min-width: 576px) {
+    .preset_author {
+        font-size:  16px;
+    }
+}
+
+
+
+.kupto_header {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+
+font: normal normal bold 40px/48px Roboto;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+}
+
+.kupto_subheader {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-16)/var(--unnamed-line-spacing-24) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+
+font: normal normal normal 16px/24px Roboto;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1;
+}
+
+
+/*
+ *
+ +++SEKCJA FAQ+++
+ *
+ */
+
+
+.faq_header {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-40)/var(--unnamed-line-spacing-48) var(--unnamed-font-family-roboto);
+letter-spacing: var(--unnamed-character-spacing-0);
+text-align: center;
+font: normal normal bold 40px/48px Roboto;
+letter-spacing: 0px;
+color: #333333;
+opacity: 1;
+}
+@media screen and (min-width: 768px) {
+    .faq_header {
+        font-size:  56px;
+    }
+}
+
+.faq_qheader {
+    display: inline-block; 
+    height: 48px; 
+    //line-height: 48px; 
+    text-align: left; 
+    max-width: 80%;
+    font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+    .faq_qheader {
+        font-size:  24px;
+    }
+}
+
+.faq_closed {
+    width: 24px; line-height: 24px; background: transparent; border: 1px solid rgba(243, 107, 127, 0.5); border-radius: 12px; opacity: 1; text-align: center; display: inline-block; color: black; float: right; font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+    .faq_closed {
+        width: 48px; 
+        line-height: 48px;
+        font-size: 24px;
+        border-radius: 24px;
+    }
+}
+.faq_closed:before {
+    content: "+";
+}
+
+
+.faq_opened {
+    width: 24px; height: 24px; line-height: 24px; background: #F36B7F 0% 0% no-repeat padding-box; border-radius: 12px; opacity: 1; text-align: center; display: inline-block; color: white; float: right; 
+}
+@media screen and (min-width: 768px) {
+    .faq_opened {
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 24px;
+        border-radius: 24px;
+    }
+}
+.faq_opened:before {
+    content: "-";
+}
+
+
+.faq_answer {
+    
+}
+
+.header_faq {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold) var(--unnamed-font-size-24)/var(--unnamed-line-spacing-32) var(--unnamed-font-family-roboto);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: left;
+    font: normal normal bold 24px/32px Roboto;
+    letter-spacing: 0px;
+    font-size: 18px;
+    color: #333333;
+    opacity: 1;
+    border: none;
+    border-bottom: 1px;
+    border-color: black;
+    padding-left: 0;
+    padding-right: 0;
+}
+@media screen and (min-width: 768px) {
+    .header_faq {
+        font-size:  24px;
+    }
+}
+
+.p_faq {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-20)/var(--unnamed-line-spacing-32) var(--unnamed-font-family-roboto);
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: left;
+    font: normal normal normal 20px/32px Roboto;
+    font-size: 16px;
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
+    border-bottom: 1px;
+    border-color: black;
+    background: #ECEEF4 0% 0% no-repeat padding-box;
+    padding: 0;
+}
+@media screen and (min-width: 768px) {
+    .p_faq {
+        font-size:  20px;
+        padding: 20px;
+    }
+}
+
+/*
+ *
+ ---KONIEC SEKCJI FAQ---
+ *
+ */
+
+.counter-label {
+    font-size: calc(14px + (37 - 14) * ((100vw - 300px) / (1920 - 300)));
+    font-weight: 700;
+    text-align: center;
+    font-family: 'roboto';
+}
+
+
+
+@media screen and (min-width: 991px) {
+    .counter-label {
+        font-size: calc(17px + (37 - 17) * ((100vw - 991px) / (1920 - 991)));
+    }
+}
+
+.main-header {
+    font-size: calc(30px + (47 - 30) * ((100vw - 300px) / (1920 - 300)));
+    font-weight: 700;
+    text-align: center;
+    font-family: 'roboto';
+}
+
+@media screen and (min-width: 991px) {
+    .main-header {
+        font-size: calc(34px + (47 - 34) * ((100vw - 991px) / (1920 - 991)));
+    }
+}
+
+
+
+.btn_buy {
+    
+  background-color: #F8CF61;
+  color: black;
+  padding: 10px 46px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+    font-weight: bold;
+    font-family: 'roboto';
+    border: 1px solid #000000;
+border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    
+}
+
+.btn_buy:hover {opacity: 0.75}
+
+
+
+
+
+
+
+.card-header-updated {
+    background: #ECEEF4 0% 0% no-repeat padding-box; border: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.card-updated {
+    border-left: none;
+    border-right: none;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+    
+}
+
+.card-border-none-top {
+    border-top: none;
+}
+
+.card-border-none-bottom {
+    border-bottom: none;
+}
+
+
+.preset_container_visible {
+    display: block;
+}
+
+.preset_container_hidden {
+    display: none;
+}
