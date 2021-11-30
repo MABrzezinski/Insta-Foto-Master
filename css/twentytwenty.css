@@ -83,7 +83,8 @@
   position: relative;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none; }
+  -ms-user-select: none; 
+  border-radius: 8px; }
   .twentytwenty-container img {
     max-width: 100%;
     position: absolute;
