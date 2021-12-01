@@ -1,5 +1,6 @@
 # Insta-Foto-Master
 Landing page I coded from a mockup
+👉 See it at https://brzezinskimichal.pl/prjcts/IFM/
 
 Using:
   * HTML5 Boilerplate (https://html5boilerplate.com)
