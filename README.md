@@ -1,5 +1,5 @@
 # Insta-Foto-Master
-Landing page I coded from a mockup
+Landing page I coded from a mockup </br>
 👉 See it at https://brzezinskimichal.pl/prjcts/IFM/
 
 Using:
