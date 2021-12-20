@@ -1,0 +1,61 @@
+/*
+ *
+ * NAV BAR
+ *
+ */
+
+nav {
+  background: transparent url("../img/BG.svg") 0% 0% no-repeat padding-box;
+  opacity: 1;
+  background-size: cover;
+  height: 80px;
+
+  .logo {
+    width: calc(118px + (170 - 118) * ((100vw - 320px) / (1920 - 320)));
+    overflow: visible;
+  }
+
+  .links {
+    position: relative;
+    top: calc(28px + (30 - 28) * ((100vw - 992px) / (2560 - 992)));
+
+    &__item {
+      font-family: Roboto;
+      display: inline-block;
+      transition: 0.2s;
+      border-bottom: 3px solid transparent;
+
+      &:hover {
+        font-weight: bold;
+        border-bottom: 3px solid white;
+      }
+
+      &::before {
+        display: block;
+        content: attr(title);
+        font-weight: bold;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  overflow: hidden;
+  background-color: #f4f0ec;
+
+  &__item {
+    font-family: Roboto;
+    display: block;
+  }
+}
+.slider {
+  transition: all 0.5s ease-in-out;
+  height: 0px;
+}
+.slider.open {
+  height: 215px;
+  overflow: auto;
+}

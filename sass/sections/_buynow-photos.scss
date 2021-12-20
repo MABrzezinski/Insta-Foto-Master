@@ -1,0 +1,30 @@
+/*
+ *
+ * BUYNOW & PHOTOS
+ *
+ */
+
+.buynow {
+  &__pack-name {
+    font: normal normal bold 24px Roboto;
+    margin-bottom: 0px;
+  }
+
+  &__p {
+    font-family: "Roboto";
+  }
+}
+
+.photos-img-mobile {
+  width: 100%;
+  max-width: 500px;
+}
+
+.price_img {
+  max-width: 148px;
+}
+
+.btn--buynow {
+  background-color: #f8cf61;
+  padding: 10px 46px;
+}

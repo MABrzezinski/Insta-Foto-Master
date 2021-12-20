@@ -1,0 +1,21 @@
+/*
+ *
+ * CONFIG
+ *
+ */
+
+// This is for fade in
+body {
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}

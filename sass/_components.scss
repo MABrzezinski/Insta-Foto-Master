@@ -1,0 +1,81 @@
+/*
+ *
+ * COMPONENTS
+ *
+ */
+
+.bar-counter {
+  background-color: black;
+  color: white;
+
+  &__header {
+    text-align: center;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: "roboto";
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+
+    @media screen and (min-width: 576px) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: 767px) {
+      font-size: 20px;
+    }
+  }
+
+  &__date-container {
+    display: inline-block;
+  }
+
+  &__date {
+    text-align: center;
+    font: normal normal bold 20px/24px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+  }
+  &__date-label {
+    text-align: center;
+    font: normal normal normal 10px/24px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.btn {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "roboto";
+  border: 1px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.mini-h {
+  text-align: center;
+  font: normal normal normal 20px/24px Roboto;
+  letter-spacing: 1px;
+  color: #f36b7f;
+  text-transform: uppercase;
+  opacity: 1;
+}

@@ -1,0 +1,125 @@
+/*
+ *
+ * FAQ
+ *
+ */
+
+.faq {
+  background: #eceef4 0% 0% no-repeat padding-box;
+
+  // Kolejne H
+  &__header {
+    text-align: center;
+    font: normal normal bold 40px/48px Roboto;
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
+
+    @media screen and (min-width: 768px) {
+      font-size: 56px;
+    }
+  }
+
+  &__question {
+    display: inline-block;
+    height: 48px;
+    text-align: left;
+    max-width: 80%;
+    font-size: 18px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+}
+
+.card {
+  // Modifies Bootstrap class
+  &--faq {
+    border-left: none;
+    border-right: none;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0;
+  }
+  // Modifies Bootstrap class
+  &-header--faq {
+    background: #eceef4 0% 0% no-repeat padding-box;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  // Modifies Bootstrap class
+  &-body--faq {
+    text-align: left;
+    font: normal normal normal 16px/28px Roboto;
+    color: #333333;
+    background: #eceef4 0% 0% no-repeat padding-box;
+    padding: 0;
+
+    @media screen and (min-width: 768px) {
+      font-size: 18px;
+      padding: 0 60px 20px 20px;
+    }
+  }
+}
+
+// Modifies Bootstrap class
+.accordion--faq {
+  & :first-child {
+    border-top: none;
+  }
+}
+
+.btn {
+  &--faq {
+    text-align: left;
+    font: normal normal bold 18px/32px Roboto;
+    letter-spacing: 0px;
+    color: #333333;
+    opacity: 1;
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media screen and (min-width: 768px) {
+      font-size: 24px;
+    }
+  }
+
+  &__indication {
+    width: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+    float: right;
+
+    @media screen and (min-width: 768px) {
+      width: 48px;
+      line-height: 48px;
+      font-size: 24px;
+      border-radius: 24px;
+    }
+
+    &--closed {
+      background: transparent;
+      border: 1px solid rgba(243, 107, 127, 0.5);
+      text-align: center;
+      color: black;
+      font-size: 18px;
+
+      &:before {
+        content: "+";
+      }
+    }
+
+    &--opened {
+      background: #f36b7f 0% 0% no-repeat padding-box;
+      text-align: center;
+      color: white;
+
+      &:before {
+        content: "-";
+      }
+    }
+  }
+}

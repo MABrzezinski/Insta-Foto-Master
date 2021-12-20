@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="pl-PL">
   <head>
     <meta charset="utf-8" />
     <title>Insta Foto Master</title>
@@ -14,6 +14,8 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="apple-touch-icon" href="icon.png" />
     <!-- Place favicon.ico in the root directory -->
+
+    <meta name="theme-color" content="#fafafa" />
 
     <link rel="stylesheet" href="css/normalize.css" />
 
@@ -33,6 +35,8 @@
 
     <link rel="stylesheet" href="css/main.css" />
 
+    <link rel="stylesheet" href="css/boilerplate.css" />
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -40,10 +44,7 @@
     ></script>
 
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
-
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
-
-    <meta name="theme-color" content="#fafafa" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
@@ -53,64 +54,66 @@
 
   <body>
     <div id="top" class="containter-fluid overflow-hidden">
-      <div class="row bar_counter">
+      <!-- COUNTER -->
+      <div class="row bar-counter">
         <div class="container">
           <div class="row px-sm-0 align-self-center">
-            <div class="col-12 my-auto text-center belka_header">
+            <div class="col-12 my-auto text-center bar-counter__header">
               <!-- Akcja zakończona! <br />→ Zapraszamy na
               <a href="https://instacademy.pl/">instacademy.pl!</a> ← -->
               DO KOŃCA AKCJI ZOSTAŁO:
             </div>
-            <div class="col-12 belka_header my-auto text-center">
-              <div class="px-1 date_single_container">
-                <div id="dni" class="date"></div>
-                <div class="date_label">DAYS</div>
+            <div class="col-12 bar-counter__header my-auto text-center">
+              <div class="px-1 bar-counter__date-container">
+                <div id="dni" class="bar-counter__date"></div>
+                <div class="bar-counter__date-label">DAYS</div>
               </div>
-              <div class="px-1 date_single_container">
-                <div id="godziny" class="date"></div>
-                <div class="date_label">HR</div>
+              <div class="px-1 bar-counter__date-container">
+                <div id="godziny" class="bar-counter__date"></div>
+                <div class="bar-counter__date-label">HR</div>
               </div>
-              <div class="px-1 date_single_container">
-                <div id="minuty" class="date"></div>
-                <div class="date_label">MIN</div>
+              <div class="px-1 bar-counter__date-container">
+                <div id="minuty" class="bar-counter__date"></div>
+                <div class="bar-counter__date-label">MIN</div>
               </div>
-              <div class="px-1 date_single_container">
-                <div id="sekundy" class="date"></div>
-                <div class="date_label">SEC</div>
+              <div class="px-1 bar-counter__date-container">
+                <div id="sekundy" class="bar-counter__date"></div>
+                <div class="bar-counter__date-label">SEC</div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- COUNTER END -->
 
-      <!-- NAVBAR logo max w 10vw-->
-      <div class="row nawigacja">
+      <!-- NAVBAR -->
+      <nav class="row">
         <div class="container-lg">
           <div class="row">
             <div class="col-5 d-none d-lg-block ml-0 ml-md-5 ml-lg-0">
               <img
                 src="img/logo2x.png"
-                class="d-block nav_logo ml-3 ml-md-3 ml-lg-0"
+                class="d-block logo ml-3 ml-md-3 ml-lg-0"
                 alt="Logo Instafotomaster"
               />
             </div>
             <div class="col-7">
-              <div class="row justify-content-end text-right nav-dist_from_top">
+              <div class="row justify-content-end text-right links">
                 <div class="col-12 d-none d-lg-block">
-                  <p class="mx-3 nav_link" title="O produkcie">
-                    <a href="#oprodukcie">O produkcie</a>
+                  <p class="mx-3 links__item" title="O produkcie">
+                    <a href="#offer">O produkcie</a>
                   </p>
-                  <p class="mx-3 nav_link" title="IFM Team">
+                  <p class="mx-3 links__item" title="IFM Team">
                     <a href="#team">IFM Team</a>
                   </p>
-                  <p class="mx-3 nav_link" title="Before/After">
-                    <a href="#presettest">Before/After</a>
+                  <p class="mx-3 links__item" title="Before/After">
+                    <a href="#presets">Before/After</a>
                   </p>
-                  <p class="mx-3 nav_link" title="FAQ">
+                  <p class="mx-3 links__item" title="FAQ">
                     <a href="#faq">FAQ</a>
                   </p>
-                  <p class="mx-3 nav_link" title="Kontakt">
-                    <a href="#kontakt">Kontakt</a>
+                  <p class="mx-3 links__item" title="Kontakt">
+                    <a href="#contact">Kontakt</a>
                   </p>
                 </div>
               </div>
@@ -120,35 +123,35 @@
             <div class="col-12">
               <img
                 src="img/logo2x.png"
-                class="d-block nav_logo float-left ml-3 ml-md-5"
+                class="d-block logo float-left ml-3 ml-md-5"
                 alt="Logo Instafotomaster"
               />
               <img
                 src="img/menu_btn.svg"
-                onclick="slideToggle('mobile_nav')"
+                onclick="slideToggle('mobile-nav')"
                 class="mr-3 mt-3 float-right"
               />
             </div>
           </div>
         </div>
-      </div>
-      <!-- KONIEC NAVBAR -->
+      </nav>
 
-      <div id="mobile_nav" class="row slider">
+      <div id="mobile-nav" class="row slider mobile-nav">
         <div class="col-12 text-center mt-3">
-          <p class="menu_item_mobile">
-            <a href="#oprodukcie">O produkcie</a>
+          <p class="mobile-nav__item">
+            <a href="#offer">O produkcie</a>
           </p>
-          <p class="menu_item_mobile"><a href="#team">IFM Team</a></p>
-          <p class="menu_item_mobile">
-            <a href="#presettest">Before/After</a>
+          <p class="mobile-nav__item"><a href="#team">IFM Team</a></p>
+          <p class="mobile-nav__item">
+            <a href="#presets">Before/After</a>
           </p>
-          <p class="menu_item_mobile"><a href="#faq">FAQ</a></p>
-          <p class="menu_item_mobile"><a href="#kontakt">Kontakt</a></p>
+          <p class="mobile-nav__item"><a href="#faq">FAQ</a></p>
+          <p class="mobile-nav__item"><a href="#contact">Kontakt</a></p>
         </div>
       </div>
+      <!-- NAVBAR END -->
 
-      <!-- KUP TERAZ -->
+      <!-- BUYNOW -->
       <div class="row mt-md-0 mt-0">
         <div class="container-lg mt-4 mt-md-2">
           <div class="row mt-5 justify-content-center">
@@ -163,15 +166,15 @@
               </div>
               <div class="row mt-2">
                 <div class="col-12 text-center">
-                  <p class="pack_name">Paczka BASIC</p>
-                  <p>
+                  <h3 class="buynow__pack-name">Paczka BASIC</h3>
+                  <p class="buynow__p">
                     <strong>51 presetów</strong> + 24 instaikony <br />+ 10
                     tapet
                   </p>
                   <a
                     href="https://www.instacademy.pl/insta-foto-master-paczka-basic"
                     target="_blank"
-                    ><div class="btn_buy">Kup teraz</div></a
+                    ><div class="btn btn--buynow">Kup teraz</div></a
                   >
                 </div>
               </div>
@@ -188,15 +191,15 @@
               </div>
               <div class="row mt-2">
                 <div class="col-12 text-center">
-                  <p class="pack_name">Paczka PRO</p>
-                  <p>
+                  <h3 class="buynow__pack-name">Paczka PRO</h3>
+                  <p class="buynow__p">
                     <strong>109 presetów</strong> + 2 e-booki<br />
                     + 65 naklejek + 111 ikon + 36 tapet
                   </p>
                   <a
                     href="https://www.instacademy.pl/insta-foto-master-paczka-pro"
                     target="_blank"
-                    ><div class="btn_buy">Kup teraz</div></a
+                    ><div class="btn btn--buynow">Kup teraz</div></a
                   >
                 </div>
               </div>
@@ -205,29 +208,29 @@
           </div>
         </div>
       </div>
-      <!-- KONIEC KUP TERAZ -->
+      <!-- BUYNOW END -->
 
-      <!-- MAIN ZDJECIA -->
+      <!-- PHOTOS -->
       <div class="row">
         <div class="container-lg">
           <div class="row">
             <div class="col-12 text-center">
               <img
                 src="img/main_img2x.png"
-                class="img-fluid mx-auto main_img d-none d-lg-block"
+                class="img-fluid mx-auto d-none d-lg-block"
               />
               <img
                 src="img/main_img_mobile@2x.png"
-                class="img-fluid mx-auto d-lg-none mt-5 main_img_mobile"
+                class="img-fluid mx-auto d-lg-none mt-5 photos-img-mobile"
               />
             </div>
           </div>
         </div>
       </div>
-      <!-- KONIEC MAIN ZDJECIA -->
+      <!-- PHOTOS END -->
 
-      <!-- OFERTA -->
-      <div id="oprodukcie" class="row mt-5">
+      <!-- OFFER -->
+      <div id="offer" class="row mt-5">
         <div class="container-lg">
           <div class="row">
             <div class="col-12 text-left mx-2 ml-md-2">
@@ -236,8 +239,8 @@
           </div>
           <div class="row mt-4">
             <div class="col-12 col-md-6 mx-2 ml-md-2">
-              <p class="oferta_header">Insta Foto Master Pro</p>
-              <p class="oferta_tekst">
+              <h1 class="offer__h">Insta Foto Master Pro</h1>
+              <p class="offer__p">
                 Joanna Banaszewska połączyła siły z twórcami: Travelicious, Life
                 Catchers, Couple Away i Gosią Bednarczuk, aby wspólnie stworzyć
                 dla Ciebie wyjątkową paczkę pełną produktów dedykowanych
@@ -247,41 +250,40 @@
             <div class="col-12 col-md-5">
               <div class="row mx-2 mx-md-0 ml-lg-4">
                 <div class="col-6 p-0">
-                  <div class="number">109</div>
-                  <div class="ofWhat">Presetów</div>
+                  <div class="offer__number">109</div>
+                  <div class="offer__label">Presetów</div>
                 </div>
                 <div class="col-6 p-0">
-                  <div class="number">02</div>
-                  <div class="ofWhat">E-booki</div>
+                  <div class="offer__number">02</div>
+                  <div class="offer__label">E-booki</div>
                 </div>
                 <div class="col-6 p-0">
-                  <div class="number">111</div>
-                  <div class="ofWhat">Instaikon</div>
+                  <div class="offer__number">111</div>
+                  <div class="offer__label">Instaikon</div>
                 </div>
                 <div class="col-6 p-0">
-                  <div class="number">101</div>
-                  <div class="ofWhat">Materiałów dodatkowych</div>
+                  <div class="offer__number">101</div>
+                  <div class="offer__label">Materiałów dodatkowych</div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- KONIEC OFERTY -->
+      <!-- OFFER END -->
 
       <!-- TEAM -->
-      <div id="team" class="row mt-5 mb-4 mb-lg-5 pb-lg-4">
+      <div id="team" class="row mt-5 mb-4 mb-lg-5 pb-lg-4 team">
         <div class="container-lg">
           <div class="row mt-5">
             <div class="col-12">
-              <p class="mini_header">IFM TEAM</p>
-              <p class="mt-0 mt-lg-5 team_header">Poznaj nas!</p>
+              <p class="mini-h">IFM TEAM</p>
+              <p class="mt-0 mt-lg-5 team__h">Poznaj nas!</p>
             </div>
           </div>
 
-          <!-- TWORCY KARUZELA -->
-          <div class="row justify-content-center mt-4 tworcy_karuzela mb-5">
-            <div class="card mx-2 karta_tworcy">
+          <div id="team-carousel" class="row justify-content-center mt-4 mb-5">
+            <div class="card mx-2 card--creator">
               <a href="https://www.instagram.com/jbanaszewska/" target="_blank"
                 ><img
                   src="img/jb@2x.png"
@@ -292,20 +294,20 @@
                 <a
                   href="https://www.instagram.com/jbanaszewska/"
                   target="_blank"
-                  ><h5 class="card-title tworcy_nazwa_mobile">
+                  ><h5 class="card-title card-title--creator">
                     @jbanaszewska
                   </h5></a
                 >
                 <a
                   href="https://www.instagram.com/jbanaszewska/"
                   target="_blank"
-                  class="check_profile"
+                  class="card__profile-link"
                   >Zobacz profil ></a
                 >
               </div>
             </div>
 
-            <div class="card mx-2 karta_tworcy">
+            <div class="card mx-2 card--creator">
               <a href="https://www.instagram.com/life.catchers" target="_blank"
                 ><img
                   src="img/lc2x.png"
@@ -316,20 +318,20 @@
                 <a
                   href="https://www.instagram.com/life.catchers"
                   target="_blank"
-                  ><h5 class="card-title tworcy_nazwa_mobile">
+                  ><h5 class="card-title card-title--creator">
                     @life.catchers
                   </h5></a
                 >
                 <a
                   href="https://www.instagram.com/life.catchers"
                   target="_blank"
-                  class="check_profile"
+                  class="card__profile-link"
                   >Zobacz profil ></a
                 >
               </div>
             </div>
 
-            <div class="card mx-2 karta_tworcy">
+            <div class="card mx-2 card--creator">
               <a
                 href="https://www.instagram.com/traveliciouspl/"
                 target="_blank"
@@ -342,39 +344,39 @@
                 <a
                   href="https://www.instagram.com/traveliciouspl/"
                   target="_blank"
-                  ><h5 class="card-title tworcy_nazwa_mobile">
+                  ><h5 class="card-title card-title--creator">
                     @traveliciouspl
                   </h5></a
                 >
                 <a
                   href="https://www.instagram.com/traveliciouspl/"
                   target="_blank"
-                  class="check_profile"
+                  class="card__profile-link"
                   >Zobacz profil ></a
                 >
               </div>
             </div>
 
-            <div class="card mx-2 karta_tworcy">
+            <div class="card mx-2 card--creator">
               <a href="https://www.instagram.com/couple.away/" target="_blank"
                 ><img src="img/ca2x.png" class="card-img-top" alt="Couple Away"
               /></a>
               <div class="card-body">
                 <a href="https://www.instagram.com/couple.away/" target="_blank"
-                  ><h5 class="card-title tworcy_nazwa_mobile">
+                  ><h5 class="card-title card-title--creator">
                     @couple.away
                   </h5></a
                 >
                 <a
                   href="https://www.instagram.com/couple.away/"
                   target="_blank"
-                  class="check_profile"
+                  class="card__profile-link"
                   >Zobacz profil ></a
                 >
               </div>
             </div>
 
-            <div class="card mx-2 karta_tworcy">
+            <div class="card mx-2 card--creator">
               <a
                 href="https://www.instagram.com/gosiabednarczuk/"
                 target="_blank"
@@ -387,49 +389,46 @@
                 <a
                   href="https://www.instagram.com/gosiabednarczuk/"
                   target="_blank"
-                  ><h5 class="card-title tworcy_nazwa_mobile">
+                  ><h5 class="card-title card-title--creator">
                     @gosiabednarczuk
                   </h5></a
                 >
                 <a
                   href="https://www.instagram.com/gosiabednarczuk/"
                   target="_blank"
-                  class="check_profile"
+                  class="card__profile-link"
                   >Zobacz profil ></a
                 >
               </div>
             </div>
           </div>
-          <!-- KONIEC TWORCY KARUZELA -->
         </div>
       </div>
-      <!-- KONIEC TEAM -->
+      <!-- TEAM END -->
 
-      <!-- TEST PRESETÓW -->
-      <div id="presettest" class="row">
+      <!-- PRESETS -->
+      <div id="presets" class="presets row">
         <div class="container-lg mt-2 mt-lg-0">
           <div class="row mt-5">
             <div class="col-12 col-lg-5 align-self-center mx-2 mx-lg-0">
               <div class="my-auto">
-                <p class="preset_beforeafter_header">BEFORE/AFTER</p>
-                <h3 class="preset_header">
-                  Zobacz, jak działają nasze presety
-                </h3>
-                <p class="preset_p">
+                <p class="mini-h mini-h--presets">BEFORE/AFTER</p>
+                <h3 class="presets__h">Zobacz, jak działają nasze presety</h3>
+                <p class="presets__p presets__p--greyed">
                   Wszystkie presety są przygotowane przez profesjonalistów,
                   którzy na co dzień zajmują się fotografią i postprodukcją
                   zdjęć. Przesuń suwak i sprawdź, jak presety odmienią Twoje
                   zdjęcie jednym kliknięciem!
                 </p>
-                <p class="preset_pdf_p">
+                <p class="presets__p">
                   Więcej zdjęć Before/After znajdziesz w PDFie pod tym linkiem -
-                  <span class="preset_pdf_link"
+                  <span class="presets__p presets__p--link"
                     ><a href="#" target="_blank">KLIKNIJ TUTAJ</a></span
                   >
                 </p>
               </div>
             </div>
-            <div class="col-12 col-lg-7 mx-auto preset_viewer_container">
+            <div class="col-12 col-lg-7 mx-auto presets__viewer">
               <div id="preset_container1" class="twentytwenty-container">
                 <!-- The before image is first -->
                 <img src="img/jb_b.jpg" />
@@ -470,92 +469,95 @@
               mx-1 mx-md-3 mx-lg-0
             "
           >
-            <div class="card mx-2 karta_preset_select">
+            <div class="card mx-2 card--presets">
               <img
                 id="preset1"
                 src="img/ba_jb@2x.png"
-                class="card-img-top preset_select preset_select_active"
+                class="card-img-top preset-select preset-select--active"
               />
               <div class="card-body pl-1">
-                <h5 class="card-title preset_title">TEALIGHT 4</h5>
+                <h5 class="card-title card-title--presets">TEALIGHT 4</h5>
                 <a
                   href="https://www.instagram.com/jbanaszewska/"
                   target="_blank"
-                  class="preset_author"
+                  class="card__author"
                   >by @jbanaszewska</a
                 >
               </div>
             </div>
 
-            <div class="card mx-2 karta_preset_select">
+            <div class="card mx-2 card--presets">
               <img
                 id="preset2"
                 src="img/ba_lc@2x.png"
-                class="card-img-top preset_select"
+                class="card-img-top preset-select"
               />
               <div class="card-body pl-1">
-                <h5 class="card-title preset_title">SUNNY 03</h5>
+                <h5 class="card-title card-title--presets">SUNNY 03</h5>
                 <a
                   href="https://www.instagram.com/life.catchers"
                   target="_blank"
-                  class="preset_author"
+                  class="card__author"
                   >by @life.catchers</a
                 >
               </div>
             </div>
 
-            <div class="card mx-2 karta_preset_select">
+            <div class="card mx-2 card--presets">
               <img
                 id="preset3"
                 src="img/ba_tr@2x.png"
-                class="card-img-top preset_select"
+                class="card-img-top preset-select"
               />
               <div class="card-body pl-1">
-                <h5 class="card-title preset_title">GOOD DAY</h5>
+                <h5 class="card-title card-title--presets">GOOD DAY</h5>
                 <a
                   href="https://www.instagram.com/traveliciouspl/"
                   target="_blank"
-                  class="preset_author"
+                  class="card__author"
                   >by @traveliciouspl</a
                 >
               </div>
             </div>
 
-            <div class="card mx-2 karta_preset_select">
+            <div class="card mx-2 card--presets">
               <img
                 id="preset4"
                 src="img/ba_ca@2x.png"
-                class="card-img-top preset_select"
+                class="card-img-top preset-select"
               />
               <div class="card-body pl-1">
-                <h5 class="card-title preset_title">OSLO</h5>
+                <h5 class="card-title card-title--presets">OSLO</h5>
                 <a
                   href="https://www.instagram.com/couple.away/"
                   target="_blank"
-                  class="preset_author"
+                  class="card__author"
                   >by @couple.away</a
                 >
               </div>
             </div>
 
-            <div class="card karta_preset_select">
+            <div class="card card--presets">
               <img
                 id="preset5"
                 src="img/ba_gb@2x.png"
-                class="card-img-top preset_select"
+                class="card-img-top preset-select"
               />
               <div class="card-body pl-1">
-                <h5 class="card-title preset_title">KALEJDOSKOP NATURY</h5>
+                <h5 class="card-title card-title--presets">
+                  KALEJDOSKOP NATURY
+                </h5>
                 <a
                   href="https://www.instagram.com/gosiabednarczuk/"
                   target="_blank"
-                  class="preset_author"
+                  class="card__author"
                   >by @gosiabednarczuk</a
                 >
               </div>
             </div>
           </div>
 
+          <!-- DONTWAIT -->
           <div
             class="
               row
@@ -565,94 +567,92 @@
               px-2
               mb-4
               mx-2
-              kupto_container
+              dontwait
             "
           >
             <div class="col-12 col-md-6 mt-5 mb-5">
-              <div class="kupto_header">
+              <div class="dontwait__header">
                 Nie czekaj,<br />wybierz swój pakiet!
               </div>
-              <div class="mt-2 kupto_subheader">
-                Akcja Insta Foto Master trwa tylko do końca niedzieli, 1
-                listopada!
+              <div class="mt-2 dontwait__p dontwait__p--no-wrap">
+                Akcja Insta Foto Master trwa tylko<wbr /> do końca
+                niedzieli,<wbr /> 1 listopada!
               </div>
             </div>
-            <div
-              class="col-12 col-md-3 mt-3 my-auto mb-5 text-center kupto_paczka"
-            >
-              <div>Pakiet BASIC</div>
-              <div class="mt-2 kupto_no_of_presets">51 presetów</div>
+            <div class="col-12 col-md-3 mt-3 my-auto mb-5 text-center">
+              <div class="dontwait__header dontwait__header--pack-name">
+                Pakiet BASIC
+              </div>
+              <div class="mt-2 dontwait__p dontwait__p--presets-number">
+                51 presetów
+              </div>
               <a
                 href="https://www.instacademy.pl/insta-foto-master-paczka-basic"
                 target="_blank"
-                ><div class="kupto_btn_buy mt-3 text-center">
+                ><div class="btn btn--dontwait mt-3 text-center">
                   Kup za 199,<sup>99</sup> ZŁ
                 </div></a
               >
             </div>
-            <div
-              class="
-                col-12 col-md-3
-                mt-5
-                my-md-auto
-                mb-5
-                text-center
-                kupto_paczka
-              "
-            >
-              <div>Pakiet PRO</div>
-              <div class="mt-2 kupto_no_of_presets">109 presetów</div>
+            <div class="col-12 col-md-3 mt-5 my-md-auto mb-5 text-center">
+              <div class="dontwait__header dontwait__header--pack-name">
+                Pakiet PRO
+              </div>
+              <div class="mt-2 dontwait__p dontwait__p--presets-number">
+                109 presetów
+              </div>
               <a
                 href="https://www.instacademy.pl/insta-foto-master-paczka-pro"
                 target="_blank"
-                ><div class="kupto_btn_buy mt-3 text-center">
+                ><div class="btn btn--dontwait mt-3 text-center">
                   Kup za 299,<sup>99</sup> ZŁ
                 </div></a
               >
             </div>
           </div>
+          <!-- DONTWAIT END -->
         </div>
       </div>
-      <!-- KONIEC TEST PRESETÓW -->
+      <!-- PRESETS END -->
 
       <!-- FAQ -->
-      <div id="faq" class="row mt-5">
+      <div id="faq" class="faq row mt-5">
         <div class="container-lg">
           <div class="row mt-5">
             <div class="col-12">
-              <p class="mini_header">FAQ</p>
-              <p class="mt-3 mx-auto faq_header">
+              <p class="mini-h">FAQ</p>
+              <h1 class="mt-3 mx-auto faq__header">
                 Najczęściej zadawane pytania
-              </p>
+              </h1>
             </div>
           </div>
-          <div class="row mb-5">
+          <div class="row mt-5 mb-5">
             <div class="col-1"></div>
             <div class="col-10 mb-5">
-              <div class="accordion" id="accordionExample">
-                <div class="card card-updated card-border-none-top">
-                  <div class="card-header card-header-updated" id="headingOneA">
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block justify-content-between header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseOneA"
-                        aria-expanded="false"
-                        aria-controls="collapseOneA"
-                      >
-                        <div class="faq_qheader">Co zawiera Pakiet BASIC?</div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+              <div id="faq__accordion" class="accordion accordion--faq">
+                <div class="card card--faq">
+                  <div id="question1" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block justify-content-between btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion1"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion1"
+                    >
+                      <div class="faq__question">Co zawiera Pakiet BASIC?</div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseOneA"
+                    id="collapseQuestion1"
                     class="collapse"
-                    aria-labelledby="headingOneA"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question1"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Od Joanny Banaszewskiej dostaniesz 5 zupełnie nowych
                       zimowych presetów SNOWY, bestsellerową paczkę BRIGHT&LIGHT
                       oraz paczkę 15 presetów VINTAGE MOOD. Oprócz tego Joanna
@@ -664,92 +664,92 @@
                       Away 10 wyselekcjonowanych presetów z paczek EUROPA, AZJA
                       i OCEANIA. Kasia Travelicious ma dla Ciebie 6 presetów z
                       kolekcji SIELSKIE LATO, a oprócz tego 10 wyjątkowych tapet
-                      na telefon ze swoich podróży. <br />Cały pakiet Basic to w
-                      sumie 51 presetów, 24 instaikony oraz 10 tapet na telefon
-                      za jedyne 199,99 zł.
+                      na telefon ze swoich podróży.<br /><br />
+                      Cały pakiet Basic to w sumie 51 presetów, 24 instaikony
+                      oraz 10 tapet na telefon za jedyne 199,99 zł.
                     </div>
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div class="card-header card-header-updated" id="headingOneB">
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block justify-content-between header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseOneB"
-                        aria-expanded="false"
-                        aria-controls="collapseOneB"
-                      >
-                        <div class="faq_qheader">Co zawiera Pakiet PRO?</div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question2" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block justify-content-between btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion2"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion2"
+                    >
+                      <div class="faq__question">Co zawiera Pakiet PRO?</div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseOneB"
+                    id="collapseQuestion2"
                     class="collapse"
-                    aria-labelledby="headingOneB"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question2"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
-                      Pakiet PRO zawiera wszystkie produkty z zestawu Basic, ale
+                    <div class="card-body card-body--faq">
+                      Pakiet PRO zawiera wszystko to, co zestaw Basic, ale
                       oprócz tego twórcy przygotowali dla Ciebie dodatkowe
-                      produkty. Joanna Banaszewska stworzyła dodatkowy zestaw 5
-                      presetów TEALIGHT do jesiennych zdjęć i dodała podręcznik
-                      Instagram Editing. Przygotowała także 80 kolorowych
-                      instaikon SPIRIT i 30 nowych naklejek na Instastory. Od
-                      zespółu Life Catchers otrzymasz dodatkowo 5 presetów
-                      wyselekcjonowanych z Ich nowej kolekcji oraz bestsellerowy
-                      zestaw 15 presetów MOODY, które nie są już nigdzie
-                      dostępne. Marta i Filip przygotowali też 10 klimatycznych
-                      tapet na Twój telefon. Gosia Bednarczuk oddaje w Twoje
-                      ręce specjalnie na potrzeby akcji 4 wyjątkowe presety do
-                      obróbki w B&W, a oprócz tego do paczki PRO podarowuje
-                      jeszcze 5 presetów z kolekcji AUTUMN i 5 presetów z
-                      kolekcji PUMPKIN. Gosia przekazuje również swój podręcznik
-                      Instadroga do Sukcesu i 20 autorskich naklejek do
-                      Instastory. Justyna i Paweł z Couple Away przekazali
-                      dodatkowo 5 presetów ze swoich kolekcji EUROPA, AZJA i
-                      OCENIA, a także 16 wyjątkowych tapet z podróży po świecie.
-                      Kasia Travelicious stworzyła zupełnie nową - subtelną
-                      paczkę ESSENTIALS, w której znajdziecie 5 wyjątkowych
-                      presetów. Dodatkowo w pakiecie PRO znajdziesz jeszcze 15
-                      naklejek na Instastory oraz 7 wyjątkowych instaikon od
-                      Kasi. <br />Pakiet PRO to w sumie 109 presetów, 111 ikon,
-                      2 podręczniki, 65 naklejek na Instastory oraz 36 tapet na
-                      telefon. Wszystkie te produkty tylko do końca tygodnia
-                      kupisz za 299,99 złotych.
+                      produkty. <br /><br />
+                      Banaszewska stworzyła dodatkowy zestaw 5 presetów TEALIGHT
+                      do jesiennych zdjęć i dodała podręcznik Instagram Editing.
+                      Przygotowała także 80 kolorowych instaikon SPIRIT i 30
+                      nowych naklejek na Instastory. Od zespółu Life Catchers
+                      otrzymasz dodatkowo 5 presetów wyselekcjonowanych z Ich
+                      nowej kolekcji oraz bestsellerowy zestaw 15 presetów
+                      MOODY, które nie są już nigdzie dostępne. Marta i Filip
+                      przygotowali też 10 klimatycznych tapet na Twój telefon.
+                      Gosia Bednarczuk oddaje w Twoje ręce specjalnie na
+                      potrzeby akcji 4 wyjątkowe presety do obróbki w B&W, a
+                      oprócz tego do paczki PRO podarowuje jeszcze 5 presetów z
+                      kolekcji AUTUMN i 5 presetów z kolekcji PUMPKIN. Gosia
+                      przekazuje również swój podręcznik Instadroga do Sukcesu i
+                      20 autorskich naklejek do Instastory. Justyna i Paweł z
+                      Couple Away przekazali dodatkowo 5 presetów ze swoich
+                      kolekcji EUROPA, AZJA i OCENIA, a także 16 wyjątkowych
+                      tapet z podróży po świecie. Kasia Travelicious stworzyła
+                      zupełnie nową - subtelną paczkę ESSENTIALS, w której
+                      znajdziecie 5 wyjątkowych presetów. Dodatkowo w pakiecie
+                      PRO znajdziesz jeszcze 15 naklejek na Instastory oraz 7
+                      wyjątkowych instaikon od Kasi. <br /><br />Pakiet PRO to w
+                      sumie 109 presetów, 111 ikon, 2 podręczniki, 65 naklejek
+                      na Instastory oraz 36 tapet na telefon. Wszystkie te
+                      produkty tylko do końca tygodnia kupisz za 299,99 złotych.
                     </div>
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div class="card-header card-header-updated" id="headingOne">
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block justify-content-between header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseOne"
-                        aria-expanded="false"
-                        aria-controls="collapseOne"
-                      >
-                        <div class="faq_qheader">
-                          Kiedy otrzymam zakupione produkty?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question3" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block justify-content-between btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion3"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion3"
+                    >
+                      <div class="faq__question">
+                        Kiedy otrzymam zakupione produkty?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseOne"
+                    id="collapseQuestion3"
                     class="collapse"
-                    aria-labelledby="headingOne"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question3"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Wiadomość z linkiem do produktów pojawi się na Twojej
                       skrzynce mailowej od razu po zaksięgowaniu wpłaty.
                       Zazwyczaj trwa to od kilku minut do 24h. W przeciwnym
@@ -759,31 +759,31 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div class="card-header card-header-updated" id="headingTwo">
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        <div class="faq_qheader">
-                          Gdzie znajdą się zakupione przeze mnie produkty?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question4" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion4"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion4"
+                    >
+                      <div class="faq__question">
+                        Gdzie znajdą się zakupione przeze mnie produkty?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseTwo"
+                    id="collapseQuestion4"
                     class="collapse"
-                    aria-labelledby="headingTwo"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question4"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Produkty można pobrać korzystając z linka umieszczonego w
                       wiadomości wysyłanej po zaksięgowaniu wpłaty. Wiadomość
                       jest wysyłana na adres mailowy podany przy składaniu
@@ -792,65 +792,62 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div
-                    class="card-header card-header-updated"
-                    id="headingThree"
-                  >
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        <div class="faq_qheader">
-                          Jakie są dostępne metody płatności?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question5" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion5"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion5"
+                    >
+                      <div class="faq__question">
+                        Jakie są dostępne metody płatności?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseThree"
+                    id="collapseQuestion5"
                     class="collapse"
-                    aria-labelledby="headingThree"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question5"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       BLIK, Karta kredytowa, płatność online, przelew
                       tradycyjny.
                     </div>
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div class="card-header card-header-updated" id="headingFour">
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        <div class="faq_qheader">
-                          Ile mam czasu na pobranie produktów?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question6" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion6"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion6"
+                    >
+                      <div class="faq__question">
+                        Ile mam czasu na pobranie produktów?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseFour"
+                    id="collapseQuestion6"
                     class="collapse"
-                    aria-labelledby="headingFour"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question6"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Produkty można pobrać przez 72 godziny. Po tym czasie link
                       do nich wygasa. Ma to na celu zapobiegać piractwu
                       komputerowemu. Jeśli Twój link wygasł, napisz do nas na:
@@ -859,31 +856,31 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div class="card-header card-header-updated" id="headingFive">
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        <div class="faq_qheader">
-                          Czy mogę otrzymać fakturę?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question7" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion7"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion7"
+                    >
+                      <div class="faq__question">
+                        Czy mogę otrzymać fakturę?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseFive"
+                    id="collapseQuestion7"
                     class="collapse"
-                    aria-labelledby="headingFive"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question7"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Tak. Wystarczy, że podczas składania zamówienia podasz w
                       tym celu wszystkie niezbędne dane. Faktura zostanie
                       wysłana do Ciebie maksymalnie w ciągu kilku dni. W razie
@@ -892,32 +889,32 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div class="card-header card-header-updated" id="headingSix">
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseSix"
-                        aria-expanded="false"
-                        aria-controls="collapseSix"
-                      >
-                        <div class="faq_qheader">
-                          Co mam zrobić, jeśli po zakupie nie dotarła do mnie
-                          wiadomość z linkiem?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question8" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion8"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion8"
+                    >
+                      <div class="faq__question">
+                        Co mam zrobić, jeśli po zakupie nie dotarła do mnie
+                        wiadomość z linkiem?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseSix"
+                    id="collapseQuestion8"
                     class="collapse"
-                    aria-labelledby="headingSix"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question8"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Prosimy o kontakt mailowy na adres: info@instacademy.pl i
                       podanie swojego numeru zamówienia. Na pewno odnajdziemy
                       zagubione zamówienie!
@@ -925,35 +922,32 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div
-                    class="card-header card-header-updated"
-                    id="headingSeven"
-                  >
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseSeven"
-                        aria-expanded="false"
-                        aria-controls="collapseSeven"
-                      >
-                        <div class="faq_qheader">Czym są presety?</div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question9" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion9"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion9"
+                    >
+                      <div class="faq__question">Czym są presety?</div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseSeven"
+                    id="collapseQuestion9"
                     class="collapse"
-                    aria-labelledby="headingSeven"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question9"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       To gotowe ustawienia do programu Lightroom. Jeśli nie
                       wiesz o czym mowa - zerknij do wpisu, gdzie wszystko
-                      wytłumaczyliśmy!<span class="preset_pdf_link"
+                      wytłumaczyliśmy!<span class="presets__p--link"
                         ><a
                           href="https://jbanaszewska.com/dlaczego-stworzylam-wlasna-paczke-z-presetami-i-dlaczego-jest-lepsza-niz-inne/"
                           target="_blank"
@@ -965,34 +959,31 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div
-                    class="card-header card-header-updated"
-                    id="headingEight"
-                  >
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseEight"
-                        aria-expanded="false"
-                        aria-controls="collapseEight"
-                      >
-                        <div class="faq_qheader">
-                          Który pakiet warto wybrać?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question10" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion10"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion10"
+                    >
+                      <div class="faq__question">
+                        Który pakiet warto wybrać?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseEight"
+                    id="collapseQuestion10"
                     class="collapse"
-                    aria-labelledby="headingEight"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question10"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Oba pakiety są bardzo atrakcyjne i posiadają starannie
                       wyselekcjonowane produkty. Paczka Basic oferuje 46
                       presetów, a PRO aż 104. Dodatkowo w pakiecie PRO
@@ -1007,32 +998,32 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div class="card-header card-header-updated" id="headingNine">
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseNine"
-                        aria-expanded="false"
-                        aria-controls="collapseNine"
-                      >
-                        <div class="faq_qheader">
-                          Nigdy wcześniej nie korzystałem z aplikacji Lightroom,
-                          czy te produkty są dla mnie?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question11" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion11"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion11"
+                    >
+                      <div class="faq__question">
+                        Nigdy wcześniej nie korzystałem z aplikacji Lightroom,
+                        czy te produkty są dla mnie?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseNine"
+                    id="collapseQuestion11"
                     class="collapse"
-                    aria-labelledby="headingNine"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question11"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Zdecydowanie tak. Dzięki presetom, które znajdziesz w
                       pakietach, dużo szybciej i sprawniej zrozumiesz na czym
                       polega obróbka zdjęć w aplikacji Lightroom. Gotowe
@@ -1046,32 +1037,32 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div class="card-header card-header-updated" id="headingTen">
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseTen"
-                        aria-expanded="false"
-                        aria-controls="collapseTen"
-                      >
-                        <div class="faq_qheader">
-                          Do jakiej wersji programu Lightroom dedykowane są
-                          presety?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question12" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion12"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion12"
+                    >
+                      <div class="faq__question">
+                        Do jakiej wersji programu Lightroom dedykowane są
+                        presety?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseTen"
+                    id="collapseQuestion12"
                     class="collapse"
-                    aria-labelledby="headingTen"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question12"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       W paczkach znajdują presety dedykowane zarówno do
                       bezpłatnej aplikacji Lightroom na smartfony i tablety, jak
                       i na komputer - czyli pełną, płatną wersję programu.
@@ -1082,35 +1073,32 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div
-                    class="card-header card-header-updated"
-                    id="headingEleven"
-                  >
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseEleven"
-                        aria-expanded="false"
-                        aria-controls="collapseEleven"
-                      >
-                        <div class="faq_qheader">
-                          Czy w paczkach znajduje się instrukcja instalacji
-                          presetów?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question13" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion13"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion13"
+                    >
+                      <div class="faq__question">
+                        Czy w paczkach znajduje się instrukcja instalacji
+                        presetów?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseEleven"
+                    id="collapseQuestion13"
                     class="collapse"
-                    aria-labelledby="headingEleven"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question13"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Tak. Presety zawierają kompleksową instrukcję, która
                       poprowadzi Was od momentu instalacji aplikacji Lightroom
                       aż po pierwsze użycie presetów. Tłumaczy ona również, jak
@@ -1119,69 +1107,62 @@
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div
-                    class="card-header card-header-updated"
-                    id="headingTwelve"
-                  >
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseTwelve"
-                        aria-expanded="false"
-                        aria-controls="collapseTwelve"
-                      >
-                        <div class="faq_qheader">
-                          Co mam zrobić, jeśli mam problem z instalacją
-                          presetów?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question14" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion14"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion14"
+                    >
+                      <div class="faq__question">
+                        Co mam zrobić, jeśli mam problem z instalacją presetów?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseTwelve"
+                    id="collapseQuestion14"
                     class="collapse"
-                    aria-labelledby="headingTwelve"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question14"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Napisz do nas na mail info@instacademy.pl. Rozwiążemy
                       wszystkie wątpliwości i problemy.
                     </div>
                   </div>
                 </div>
 
-                <div class="card card-updated">
-                  <div
-                    class="card-header card-header-updated"
-                    id="headingThirteen"
-                  >
-                    <h2 class="mb-0">
-                      <button
-                        class="btn btn-block text-left collapsed header_faq"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#collapseThirteen"
-                        aria-expanded="false"
-                        aria-controls="collapseThirteen"
-                      >
-                        <div class="faq_qheader">
-                          Czy pakiety będą dostępne później?
-                        </div>
-                        <div class="faq_closed"></div>
-                      </button>
-                    </h2>
+                <div class="card card--faq">
+                  <div id="question15" class="card-header card-header--faq">
+                    <button
+                      class="btn btn-block text-left collapsed btn--faq"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseQuestion15"
+                      aria-expanded="false"
+                      aria-controls="collapseQuestion15"
+                    >
+                      <div class="faq__question">
+                        Czy pakiety będą dostępne później?
+                      </div>
+                      <div
+                        class="btn__indication btn__indication--closed"
+                      ></div>
+                    </button>
                   </div>
                   <div
-                    id="collapseThirteen"
+                    id="collapseQuestion15"
                     class="collapse"
-                    aria-labelledby="headingThirteen"
-                    data-parent="#accordionExample"
+                    aria-labelledby="question15"
+                    data-parent="#faq__accordion"
                   >
-                    <div class="card-body p_faq">
+                    <div class="card-body card-body--faq">
                       Nie! To wyjątkowa akcja, która trwa tylko przez 7 dni od
                       poniedziałku 26 października do niedzieli 1 listopada i
                       tylko w tych dniach można zakupić pakiety Insta Foto
@@ -1190,60 +1171,23 @@
                   </div>
                 </div>
               </div>
-
-              <script>
-                $("#accordionExample").on(
-                  "hide.bs.collapse show.bs.collapse",
-                  (e) => {
-                    $(e.target)
-                      .prev()
-                      .find("div:last-child")
-                      .toggleClass("faq_closed faq_opened");
-                    $("faq_closed").replaceWith("-");
-                    $("faq_opened").replaceWith("-");
-                  }
-                );
-              </script>
-
-              <script>
-                $("#accordionExample").on("shown.bs.collapse", (e) => {
-                  $("html, body").animate(
-                    {
-                      scrollTop: $(e.target).prev().offset().top,
-                    },
-                    400
-                  );
-                });
-              </script>
             </div>
             <div class="col-1"></div>
           </div>
         </div>
       </div>
-      <!-- KONIEC FAQ -->
+      <!-- FAQ END -->
 
-      <!-- KONTAKT -->
-      <div id="kontakt" class="row">
+      <!-- CONTACT -->
+      <div id="contact" class="contact row">
         <div class="container-lg mt-3 mb-5 mb-lg-1">
           <div class="row mt-5 px-3">
             <div class="col-12 col-lg-6">
-              <div class="kontakt_header">Newsletter</div>
-              <div class="mt-1 mb-3 txt_greyed">
+              <div class="contact__h">Newsletter</div>
+              <div class="mt-1 contact__p contact__p--grey">
                 Zapisz się żeby nie przegapić kolejnych świetnych współprac!
               </div>
               <div>
-                <script>
-                  var fmFCFllpy5bwkxx = function (e) {
-                    if (e.data.type === "resize") {
-                      document.getElementById(
-                        "fm-fc-f-llpy5bwkxx"
-                      ).style.minHeight = e.data.size + "px";
-                    }
-                  };
-                  window.addEventListener
-                    ? addEventListener("message", fmFCFllpy5bwkxx, !1)
-                    : attachEvent("onmessage", fmFCFllpy5bwkxx);
-                </script>
                 <iframe
                   id="fm-fc-f-llpy5bwkxx"
                   src="https://forms.freshmail.io/f/lhhn9heqs0/llpy5bwkxx/index.html"
@@ -1251,84 +1195,89 @@
                   marginheight="0"
                   marginwidth="0"
                   width="100%"
-                  style="min-height: 241px"
+                  style="
+                    min-height: 241px;
+                    margin-left: -10px;
+                    margin-top: -20px;
+                  "
                 ></iframe>
               </div>
             </div>
             <div class="col-12 col-lg-1 d-none d-lg-block"></div>
             <div class="col-12 col-lg-5">
-              <div class="kontakt_header">Znajdziesz nas tu</div>
-              <div class="mt-1 mb-2 txt_greyed">
+              <div class="contact__h">Znajdziesz nas tu</div>
+              <div class="mt-1 mb-2 contact__p contact__p--grey">
                 Zajrzyj na media społecznościowe i sprawdź nasz sklep
-                internetowym.
+                internetowy.
               </div>
               <div class="mt-3 mt-lg-4 mt-xl-2">
                 <a
                   href="https://www.instagram.com/instacademy_/"
                   target="_blank"
-                  ><img src="img/ig_icon.svg" class="img-fluid sm_icon"
+                  ><img src="img/ig_icon.svg" class="img-fluid mr-2"
                 /></a>
                 <a
                   href="https://www.facebook.com/jbanaszewskaofficial"
                   target="_blank"
-                  ><img src="img/fb_icon.svg" class="img-fluid sm_icon"
+                  ><img src="img/fb_icon.svg" class="img-fluid mr-2"
                 /></a>
                 <a href="https://www.instacademy.pl" target="_blank"
-                  ><img src="img/ecomm_icon.svg" class="img-fluid sm_icon"
+                  ><img src="img/ecomm_icon.svg" class="img-fluid mr-2"
                 /></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- KONIEC KONTAKT -->
+      <!-- CONTACT END -->
 
-      <div id="footer" class="row">
+      <!-- FOOTER -->
+      <div id="footer" class="footer row">
         <div class="container-lg mt-3">
           <div class="row mt-5 px-3">
             <div class="order-3 col-12 order-lg-1 col-lg-6 mt-5 mb-2 mt-lg-0">
               <a href="#top"
                 ><img
                   src="img/logo_bottom@2x.png"
-                  class="d-block img-fluid footer_logo"
+                  class="d-block img-fluid footer__logo"
                   alt="Logo Instafotomaster"
               /></a>
             </div>
             <div class="order-2 col-12 order-lg-2 col-lg-2 mt-4 mt-lg-0">
-              <div class="mb-2 footer_header">Menu</div>
-              <div class="mb-1 txt_greyed">
-                <a href="#oprodukcie">O produkcie</a>
+              <div class="mb-2 footer__header">Menu</div>
+              <div class="mb-1 footer__p footer__p--grey">
+                <a href="#offer">O produkcie</a>
               </div>
-              <div class="mb-1 txt_greyed">
+              <div class="mb-1 footer__p footer__p--grey">
                 <a href="#team">IFM Team</a>
               </div>
-              <div class="mb-1 txt_greyed">
-                <a href="#presettest">Before/After</a>
+              <div class="mb-1 footer__p footer__p--grey">
+                <a href="#presets">Before/After</a>
               </div>
-              <div class="mb-1 txt_greyed">
+              <div class="mb-1 footer__p footer__p--grey">
                 <a href="#faq">FAQ</a>
               </div>
-              <div class="txt_greyed">
-                <a href="#kontakt">Kontakt</a>
+              <div class="footer__p footer__p--grey">
+                <a href="#contact">Kontakt</a>
               </div>
             </div>
             <div class="order-1 col-12 order-lg-3 col-lg-4">
-              <div class="mb-2 footer_header">Kontakt</div>
-              <div class="mb-1 mt-2 txt_greyed">
+              <div class="mb-2 footer__header">Kontakt</div>
+              <div class="mb-1 mt-2 footer__p footer__p--grey">
                 Jeśli masz jakieś pytania dotyczące produktu lub potrzebujesz
                 pomocy, pisz na adres e-mail:
               </div>
-              <div class="email">info@instacademy.pl</div>
+              <div class="footer__p footer__p--email">info@instacademy.pl</div>
             </div>
           </div>
           <div class="row">
             <div class="col-12">
-              <hr class="footer_hr" />
+              <hr class="footer__hr" />
             </div>
           </div>
           <div class="row mb-3 px-3 mt-2">
             <div class="col-12">
-              <div class="txt_greyed">
+              <div class="footer__p footer__p--grey">
                 © 2020. All Rights Reserved.<br />
                 Created by INSTACADEMY.
               </div>
@@ -1336,6 +1285,7 @@
           </div>
         </div>
       </div>
+      <!-- FOOTER END -->
     </div>
 
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>

@@ -1,0 +1,41 @@
+/*
+ *
+ * DONTWAIT
+ *
+ */
+
+.dontwait {
+  background: #f36b7f 0% 0% no-repeat padding-box;
+  border-radius: 8px;
+
+  &__header {
+    font: normal normal bold 40px/48px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+
+    &--pack-name {
+      font: normal normal bold 24px/19px Roboto;
+    }
+  }
+
+  &__p {
+    font: normal normal normal 16px/24px Roboto;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+
+    &--presets-number {
+      line-height: 19px;
+    }
+
+    &--no-wrap {
+      white-space: nowrap;
+    }
+  }
+}
+
+.btn--dontwait {
+  background-color: white;
+  padding: 10px 12px;
+}
